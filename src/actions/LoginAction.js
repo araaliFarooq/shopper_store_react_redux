@@ -14,7 +14,6 @@ export const loginSuccess = response => ({
 export const login = userData => {
   const proxyurl = "https://cors-anywhere.herokuapp.com/";
   return function(dispatch) {
-    console.log("user_data", userData);
     fetch(
       `${proxyurl}https://shopers-store-api-2.herokuapp.com/api/auth/login`,
       {
