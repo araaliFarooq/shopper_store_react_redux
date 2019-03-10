@@ -20,9 +20,6 @@ class Login extends Component {
     if (nextProps.errors) {
       this.setState({ errors: nextProps.errors });
     }
-    // if (nextProps.isAuthenticated) {
-    //   this.props.history.push("/");
-    // }
   }
 
   onChange = e => {
@@ -39,6 +36,7 @@ class Login extends Component {
   };
 
   render() {
+    const { errors } = this.props;
     return (
       <section id="contain">
         <div className="login_box">
