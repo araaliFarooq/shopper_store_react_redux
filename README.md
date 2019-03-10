@@ -1,0 +1,5 @@
+[![Build Status](https://travis-ci.org/araaliFarooq/shopper_store_react_redux.svg?branch=master)](https://travis-ci.org/araaliFarooq/shopper_store_react_redux)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/fc765c9de0804bdfb7481e59d8b8008d)](https://www.codacy.com/app/araaliFarooq/shopper_store_react_redux?utm_source=github.com&utm_medium=referral&utm_content=araaliFarooq/shopper_store_react_redux&utm_campaign=Badge_Grade)
+[![Coverage Status](https://coveralls.io/repos/github/araaliFarooq/shopper_store_react_redux/badge.svg?branch=master)](https://coveralls.io/github/araaliFarooq/shopper_store_react_redux?branch=master)
+[![Maintainability](https://api.codeclimate.com/v1/badges/2e46afc3167cbf0c401f/maintainability)](https://codeclimate.com/github/araaliFarooq/shopper_store_react_redux/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/2e46afc3167cbf0c401f/test_coverage)](https://codeclimate.com/github/araaliFarooq/shopper_store_react_redux/test_coverage)
