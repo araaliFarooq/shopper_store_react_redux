@@ -15,7 +15,7 @@ export const registerAttendant = data => {
   //   const proxyurl = "https://cors-anywhere.herokuapp.com/";
   const token = window.localStorage.getItem("token");
   return function(dispatch) {
-    fetch(`http://127.0.0.1:5000/api/auth/register`, {
+    fetch(`https://shopers-store-api-2.herokuapp.com/api/auth/register`, {
       method: "POST",
       headers: {
         "content-type": "application/json",
