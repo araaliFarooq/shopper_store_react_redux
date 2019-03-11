@@ -36,7 +36,6 @@ class Login extends Component {
   };
 
   render() {
-    const { errors } = this.props;
     return (
       <section id="contain">
         <div className="login_box">
