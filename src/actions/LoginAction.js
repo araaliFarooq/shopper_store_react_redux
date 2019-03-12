@@ -15,17 +15,20 @@ export const login = userData => {
   const proxyurl = "https://cors-anywhere.herokuapp.com/";
   return function(dispatch) {
     console.log("user_data", userData);
-    fetch(`http://127.0.0.1:5000/api/auth/login`, {
-      method: "POST",
-      headers: {
-        "content-type": "application/json"
-      },
-      CORS: "no-cors",
-      body: JSON.stringify({
-        user_name: userData.user_name,
-        password: userData.password
-      })
-    })
+    fetch(
+      `${proxyurl}https://shopers-store-api-2.herokuapp.com/api/auth/login`,
+      {
+        method: "POST",
+        headers: {
+          "content-type": "application/json"
+        },
+        CORS: "no-cors",
+        body: JSON.stringify({
+          user_name: userData.user_name,
+          password: userData.password
+        })
+      }
+    )
       .then(res => res.json())
       .then(response => {
         if (response.token) {
