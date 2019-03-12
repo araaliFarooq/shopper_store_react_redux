@@ -1,0 +1,54 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true,
+    "mocha": true
+  },
+  "extends": ["airbnb", "prettier"],
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "sourceType": "module",
+    "allowImportExportEverywhere": true
+  },
+  "rules": {
+    "no-console": "off",
+    "strict": ["error", "global"],
+    "curly": "warn",
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [".js", ".jsx"]
+      }
+    ],
+    "quotes": ["error", "double"],
+    "indent": ["error", 2],
+    "semi": ["error", "always"],
+    "function-paren-newline": "off",
+    "react/no-children-prop": 0,
+    "no-nested-ternary": 0,
+    "camelcase": [
+      2,
+      {
+        "properties": "never"
+      }
+    ],
+    "no-unused-expressions": [
+      "error",
+      {
+        "allowShortCircuit": true
+      }
+    ],
+    "class-methods-use-this": [
+      "error",
+      {
+        "exceptMethods": [
+          "getSnapshotBeforeUpdate",
+          "render",
+          "componentWillUnmount",
+          "componentDidMount"
+        ]
+      }
+    ]
+  }
+}

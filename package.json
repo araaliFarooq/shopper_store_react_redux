@@ -1,5 +1,5 @@
 {
-  "name": "ah-frontend-valkyrie",
+  "name": "Shopers_store_manager",
   "version": "1.0.0",
   "main": "webpack.config.js",
   "scripts": {
@@ -8,6 +8,16 @@
     "test:coverage": "jest --coverage --colors",
     "start": "webpack-dev-server --open --mode development",
     "build": "webpack --mode production"
+  },
+  "jest": {
+    "testEnvironment": "jsdom",
+    "moduleNameMapper": {
+      "\\.('jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2)$": "<rootDir>/src/fileMock.js",
+      "\\.(css|scss)$": "<rootDir>/src/styleMock.js"
+    },
+    "setupFilesAfterEnv": [
+      "<rootDir>/tests/enzyme.config.js"
+    ]
   },
   "devDependencies": {
     "@babel/core": "^7.2.2",
@@ -43,18 +53,22 @@
   },
   "homepage": "https://github.com/araaliFarooq/shopper_store_react_redux#readme",
   "dependencies": {
-    "react": "^16.8.1",
-    "react-dom": "^16.8.1",
     "css-loader": "^2.1.0",
+    "fetch-mock": "^7.3.1",
+    "jest-cli": "^24.4.0",
+    "node-fetch": "^2.3.0",
     "node-sass": "^4.11.0",
     "prop-types": "^15.7.1",
+    "react": "^16.8.1",
+    "react-dom": "^16.8.1",
     "react-redux": "^6.0.0",
+    "react-router-dom": "^4.3.1",
     "react-scripts": "1.1.4",
     "redux": "^4.0.1",
     "redux-devtools-extension": "^2.13.8",
+    "redux-mock-store": "^1.5.3",
     "redux-thunk": "^2.3.0",
     "sass-loader": "^7.1.0",
-    "style-loader": "^0.23.1",
-    "react-router-dom": "^4.3.1"
+    "style-loader": "^0.23.1"
   }
 }
