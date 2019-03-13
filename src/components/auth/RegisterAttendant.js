@@ -37,6 +37,8 @@ export class RegisterAttendant extends Component {
       role: this.state.role
     };
     this.props.registerAttendant(userData);
+    e.target.reset();
+    this.setState({ username: "" });
   };
 
   render() {

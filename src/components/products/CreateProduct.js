@@ -37,6 +37,8 @@ export class CreateProduct extends Component {
       category: this.state.category
     };
     this.props.createProduct(productData);
+    e.target.reset();
+    this.setState({ product: "" });
   };
 
   render() {

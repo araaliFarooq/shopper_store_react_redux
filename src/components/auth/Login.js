@@ -33,6 +33,8 @@ class Login extends Component {
       password: this.state.password
     };
     this.props.login(userData);
+    e.target.reset();
+    this.setState({ username: "" });
   };
 
   render() {
