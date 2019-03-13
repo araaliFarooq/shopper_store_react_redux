@@ -1,12 +1,20 @@
 language: node_js
-
 node_js:
   - "10"
-
+env:
+  matrix:
+    - REACT=16.7
+  global:
+    secure: TEFQ9lx1rWMpVkqHH1+XOlFZlgqczEf8fL3XV5u4v5kQbsuu085/GPYMxIz9H4dCIt+D0XEnbpSvDmUt0CzcMBSOvopdWELhH4v9zJV/LW+28gwGxHhJqdKhI5gZ5jgTVTwjW463TXOc7333jHIr1yy9eiwV5YQqpSPAU+fOapTFzPgTmU1ySurPEsBGS7VNN+UpMe3d25ZvpmQQuyoPDLR+f69KiHWvcF1J/3TxVXPPuK/le72VslqkmwDWxPOndyQMuUf+SIWYjqIj8EucleT76DXGoqO/MDRV4sYnw52wFogP3eUyAqDXzBecZfGAws4M8PJH0zbpmTdPurOfDberRcMh5zJydR5B3mh2wGTUJheSceoiuALZD0K+95uRgzkyqKDXMJl7JdzYeRoJ1LnsvtGuB9ima9F5lKmwLdzHQnDExE7IbUs2T/ieCqPwHCuEu0fiyELTbzm1RXqmvUhHy2V2RIdDi6DqSjsqPv3P7XxHrAesIV/EfhgMegjk7qCj3642zIuumYQY2aYnWXv5lqPTuaZCZYIazF6ayMnBjkFz86AcZppAeK+F/Wy6ufwYah4Rj90WCJyNhXa33TBBMKJDJuVnlATFToY6VuF8nd/E323mrFoLDpI+quQwf/jVY84sFk6wgJrEJSbyhEsRCrtfqxmPeHdSm4iGx+o=
+before_script:
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64
+    > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - "./cc-test-reporter before-build"
 script:
-  - npm install
-  - npm install jest@latest --save-dev
-  - npm test
-
+  - rm -f package-lock.json && npm install
+  - npm install jest@latest
+  - npm run build
+  - npm run test -- -u --coverage
 after_script:
-  - coveralls
+  - "./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT"
