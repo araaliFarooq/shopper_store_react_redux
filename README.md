@@ -23,9 +23,9 @@ This is an API of an application to manage and record transcations of a shopping
 
 ## Heroku UI demo link
 
-- Login: https://araalifarooq.docs.apiary.io
-- Add Attendant: https://araalifarooq.docs.apiary.io
-- Add Product: https://araalifarooq.docs.apiary.io
+- Login: https://shopers-store-react-redux.herokuapp.com/users/login
+- Add Attendant: https://shopers-store-react-redux.herokuapp.com/users/register
+- Add Product: https://shopers-store-react-redux.herokuapp.com/products/create
   
 
 ## Tools Used
