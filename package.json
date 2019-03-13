@@ -6,7 +6,7 @@
     "test": "jest --detectOpenHandles --coverage",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage --colors",
-    "start": "webpack-dev-server --open --mode development",
+    "start": "node server.js",
     "build": "webpack --mode production"
   },
   "jest": {
